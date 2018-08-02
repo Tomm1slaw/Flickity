@@ -1,2 +1,2 @@
 # Flickity
-https://github.com/Tomm1slaw/Flickity.git
+https://tomm1slaw.github.io/Flickity/
