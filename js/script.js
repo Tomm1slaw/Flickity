@@ -38,29 +38,3 @@ flkty.on('scroll', function(progress) {
     progressBar.style.width = progress * 100 + '%';
 });
 
-// map
-
-// Initialize and add the map
-window.initMap = function initMap() {
-
-    var coordinations = sliderData[0].coords;
-
-    var map = new google.maps.Map(
-        document.getElementById('map'), {
-            zoom: 5,
-            center: coordinations
-        });
-    var marker = new google.maps.Marker({
-        position: coordinations,
-        map: map
-    });
-    
-    for (var i = 0; i < sliderData.length; i++) {
-        var coordinations = sliderData[i].coords;
-        var marker = new google.maps.Marker({
-            position: coordinations,
-            map: map
-        });
-        console.log(coordinations);
-    };
-};
