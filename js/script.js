@@ -42,7 +42,7 @@ flkty.on('scroll', function(progress) {
 // Initialize and add the map
 window.initMap = function initMap() {
     
-    var coordinations = sliderData[0].coords;
+    var coordinations = sliderData[1].coords;
     
     var map = new google.maps.Map(
         document.getElementById('map'), {

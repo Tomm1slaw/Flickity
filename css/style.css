@@ -7,3 +7,5 @@
 .button { position: absolute; top: 30px; left: 40px; }
 
 .progress-bar { height: 20px; width: 0; background: #333; }
+
+#map { height: 50vh; width: 100%; }
