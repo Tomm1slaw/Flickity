@@ -9,33 +9,50 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="main-carousel">
-		<div class="carousel-cell" id="carousel-cell1" style="background-image: url(https://images.pexels.com/photos/10676/Warsaw-center-free-license-CC0.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);background-size:cover;background-position: center;">
-			<div class="container">
-				<p>What is great in Warsaw</p>
-			</div>
-		</div>
-		<div class="carousel-cell" id="carousel-cell2" style="background-image: url(https://thumb9.shutterstock.com/display_pic_with_logo/541009/788842282/stock-photo-paris-eiffel-tower-788842282.jpg);background-size:cover;background-position: center;">
-			<div class="container">
-				<p>What is great in Paris</p>
-			</div>
-		</div>
-		<div class="carousel-cell" id="carousel-cell3" style="background-image: url(https://thumb7.shutterstock.com/display_pic_with_logo/178834/1021731634/stock-photo-london-cityscape-with-tower-bridge-over-the-river-thames-in-evening-light-1021731634.jpg);background-size:cover;background-position: center;">
-			<div class="container">
-				<p>What is great in London</p>
-			</div>
-		</div>
-	 	<div class="carousel-cell" id="carousel-cell4" style="background-image: url(https://thumb1.shutterstock.com/display_pic_with_logo/370363/370363,1279728626,6/stock-photo-new-york-city-skyline-cityscape-with-statue-of-liberty-over-hudson-river-with-midtown-manhattan-57571180.jpg);background-size:cover;background-position: center;">
-	 		<div class="container">
-	 			<p>What is great in New York</p>
-	 		</div>
-	 	</div>
-	 	<div class="carousel-cell" id="carousel-cell5" style="background-image: url(https://thumb9.shutterstock.com/display_pic_with_logo/204676805/1137536495/stock-photo-travel-gda-sk-poland-1137536495.jpg);background-size:cover;background-position: center;">
-	 		<div class="container">
-	 			<p>What is great in Gdańsk</p>
-	 		</div>
-	 	</div>
+	<div class="main-carousel" id="results">	
 	</div>
+	<script id="template-list-item">
+		<div class="carousel-cell" id="carousel-cell{{number}}" style="background-image:url('{{image}}');background-size:cover;background-position:center;">
+			<div class="container">
+				<h1>{{title}}</h1>
+				{{desc}}
+			</div>
+		</div>
+	</script>
+	<script>
+		var sliderData = [
+			{
+				number: '1',
+				image: 'https://images.pexels.com/photos/10676/Warsaw-center-free-license-CC0.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+				title: 'Warsaw',
+			    desc: 'The Warsaw Spire'
+			},
+			{
+				number: '2',
+				image: 'https://thumb9.shutterstock.com/display_pic_with_logo/541009/788842282/stock-photo-paris-eiffel-tower-788842282.jpg', 
+				title: 'Paris',
+			    desc: 'Eiffel Tower'
+			},
+			{
+				number: '3',
+				image: 'https://thumb7.shutterstock.com/display_pic_with_logo/178834/1021731634/stock-photo-london-cityscape-with-tower-bridge-over-the-river-thames-in-evening-light-1021731634.jpg', 
+				title: 'London',
+			    desc: 'Tower Bridge'
+			},
+			{
+				number: '4',
+				image: 'https://thumb1.shutterstock.com/display_pic_with_logo/370363/370363,1279728626,6/stock-photo-new-york-city-skyline-cityscape-with-statue-of-liberty-over-hudson-river-with-midtown-manhattan-57571180.jpg', 
+				title: 'New York',
+			    desc: 'Statue of Liberty'
+			},
+			{
+				number: '5',
+				image: 'https://thumb9.shutterstock.com/display_pic_with_logo/204676805/1137536495/stock-photo-travel-gda-sk-poland-1137536495.jpg', 
+				title: 'Gdańsk',
+			    desc: 'Dar Pomorza'
+			}
+		];
+	</script>
 	<button class="button">Restart</button> 
 	<div class="progress-bar"></div>
 	<script  src="vendor/flickity.pkgd.min.js"></script>
