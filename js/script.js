@@ -42,17 +42,12 @@ flkty.on('scroll', function(progress) {
 // Initialize and add the map
 window.initMap =  function() {
     
-    var coordinations = sliderData[i].coords;
-    
     var map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 3,
-            center: coordinations
+            center: sliderData[1].coords
         });
-    var marker = new google.maps.Marker({
-        position: coordinations,
-        map: map
-    });
+
     for (var i = 0; i < sliderData.length; i++) {
         var coordinations = sliderData[i].coords;
         var marker = new google.maps.Marker({
