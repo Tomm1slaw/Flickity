@@ -25,39 +25,45 @@
 				number: '1',
 				image: 'https://images.pexels.com/photos/10676/Warsaw-center-free-license-CC0.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 				title: 'Warsaw',
-			    desc: 'The Warsaw Spire'
-			},
+			    desc: 'The Warsaw Spire',
+			    coords: {lat: 52.237049, lng: 21.017532}
 			{
 				number: '2',
 				image: 'https://thumb9.shutterstock.com/display_pic_with_logo/541009/788842282/stock-photo-paris-eiffel-tower-788842282.jpg', 
 				title: 'Paris',
-			    desc: 'Eiffel Tower'
+			    desc: 'Eiffel Tower',
+			    coords: {lat: 48.864716, lng: 2.349014}
 			},
 			{
 				number: '3',
 				image: 'https://thumb7.shutterstock.com/display_pic_with_logo/178834/1021731634/stock-photo-london-cityscape-with-tower-bridge-over-the-river-thames-in-evening-light-1021731634.jpg', 
 				title: 'London',
-			    desc: 'Tower Bridge'
+			    desc: 'Tower Bridge',
+			    coords: {lat: 51.509865, lng: -0.118092}
 			},
 			{
 				number: '4',
 				image: 'https://thumb1.shutterstock.com/display_pic_with_logo/370363/370363,1279728626,6/stock-photo-new-york-city-skyline-cityscape-with-statue-of-liberty-over-hudson-river-with-midtown-manhattan-57571180.jpg', 
 				title: 'New York',
-			    desc: 'Statue of Liberty'
+			    desc: 'Statue of Liberty',
+			    coords: {lat: 40.730610, lng: -73.935242}
 			},
 			{
 				number: '5',
 				image: 'https://thumb9.shutterstock.com/display_pic_with_logo/204676805/1137536495/stock-photo-travel-gda-sk-poland-1137536495.jpg', 
 				title: 'Gdańsk',
-			    desc: 'Dar Pomorza'
+			    desc: 'Dar Pomorza',
+			    coords: {lat: 54.372158, lng: 18.638306}
 			}
 		];
 	</script>
-	<button class="button">Restart</button> 
-	<div class="progress-bar"></div>
+	<button class="button">Restart</button>
+	<div class="progress-bar"></div> 
+	<div id="map"></div>
 	<script  src="vendor/flickity.pkgd.min.js"></script>
 	<script src="vendor/hash.js"></script>
 	<script src="vendor/mustache.js"></script>
 	<script  src="js/script.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBetwat0F2IqakN1_CEgen3RGGYF2LcIus=initMap"></script>
 </body>
 </html>

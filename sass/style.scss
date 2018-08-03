@@ -5,13 +5,13 @@
 // carousel
 
 .carousel-cell {
-	  width: 100%; /* full width */
-	  height: 50vh; /* height of carousel */
-	  margin-right: 10px;
-	  min-height: 250px;
-	  text-align: center;
-	  color: #fff;
-	  font-size: 40px;
+	width: 100%; /* full width */
+	height: 50vh; /* height of carousel */
+	margin-right: 10px;
+	min-height: 250px;
+	text-align: center;
+	color: #fff;
+	font-size: 40px;
 }
 
 .container {
@@ -30,7 +30,14 @@
 // scroll
 
 .progress-bar {
-  height: 20px;
-  width: 0;
-  background: #333;
+	height: 20px;
+	width: 0;
+	background: #333;
+}
+
+// map
+
+#map {
+    height: 50vh;
+    width: 100%;
 }
