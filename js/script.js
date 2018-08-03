@@ -54,6 +54,7 @@ window.initMap = function initMap() {
         position: coordinations,
         map: map
     });
+    
     for (var i = 0; i < sliderData.length; i++) {
         var coordinations = sliderData[i].coords;
         var marker = new google.maps.Marker({
@@ -63,4 +64,3 @@ window.initMap = function initMap() {
         console.log(coordinations);
     };
 };
-initMap();
