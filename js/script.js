@@ -41,6 +41,8 @@ flkty.on('scroll', function(progress) {
 // map
 // Initialize and add the map
 window.initMap =  function() {
+
+    var marker = [];
     
     var map = new google.maps.Map(
         document.getElementById('map'), {
@@ -50,10 +52,17 @@ window.initMap =  function() {
 
     for (var i = 0; i < sliderData.length; i++) {
         var coordinations = sliderData[i].coords;
-        var marker = new google.maps.Marker({
+        marker [i]= new google.maps.Marker({
             position: coordinations,
             map: map
         });
-        console.log(coordinations);
+        addClickToMarker(marker[i], i);
     };
+    
+    function addClickToMarker(marker, index) {
+            marker.addListener('click', function(){
+                console.log('Index', index);
+                flkty.select(index);
+            });
+        }
 };
