@@ -58,11 +58,21 @@ window.initMap =  function() {
         });
         addClickToMarker(marker[i], i);
     };
-    
+
+// change slide after click marker
+
     function addClickToMarker(marker, index) {
             marker.addListener('click', function(){
                 console.log('Index', index);
                 flkty.select(index);
             });
         }
+
+// center map after change active slide
+
+    flkty.on( 'change', function( index ) {
+          map.panTo(sliderData[index].coords);
+          map.setZoom(10);
+          console.log('Change to' + sliderData[index].coords)
+        });
 };
