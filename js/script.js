@@ -5,7 +5,6 @@ var listItems = '';
 for (var i = 0; i < sliderData.length; i++) {
     listItems += Mustache.render(templateListItem, sliderData[i]);
 }
-console.log(listItems);
 
 var results = document.getElementById('results');
 results.insertAdjacentHTML('beforeend', listItems);
@@ -26,7 +25,7 @@ var flkty = new Flickity(elem, {
 
 var buttonRestart = document.querySelector('.button');
 
-buttonRestart.addEventListener('click', function(event) {
+buttonRestart.addEventListener('click', function() {
     flkty.select(0);
 });
 
@@ -38,12 +37,12 @@ flkty.on('scroll', function(progress) {
     progressBar.style.width = progress * 100 + '%';
 });
 
-// map
 // Initialize and add the map
-window.initMap =  function() {
+
+window.initMap = function() {
 
     var marker = [];
-    
+
     var map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 3,
@@ -52,27 +51,25 @@ window.initMap =  function() {
 
     for (var i = 0; i < sliderData.length; i++) {
         var coordinations = sliderData[i].coords;
-        marker [i]= new google.maps.Marker({
+        marker[i] = new google.maps.Marker({
             position: coordinations,
             map: map
         });
         addClickToMarker(marker[i], i);
-    };
+    }
 
-// change slide after click marker
+    // change slide after click marker
 
     function addClickToMarker(marker, index) {
-            marker.addListener('click', function(){
-                console.log('Index', index);
-                flkty.select(index);
-            });
-        }
-
-// center map after change active slide
-
-    flkty.on( 'change', function( index ) {
-          map.panTo(sliderData[index].coords);
-          map.setZoom(10);
-          console.log('Change to' + sliderData[index].coords)
+        marker.addListener('click', function() {
+            flkty.select(index);
         });
+    }
+
+    // center map after change active slide
+
+    flkty.on('change', function(index) {
+        map.panTo(sliderData[index].coords);
+        map.setZoom(10);
+    });
 };
